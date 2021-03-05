@@ -8,3 +8,9 @@ td {
     width: 50px;
     background-color: white;
 }
+
+#x {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
