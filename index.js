@@ -1,7 +1,7 @@
 // global var setup
 let rows = 0;
 let cols = 0;
-let color;
+let color = "#FFFFFF";
 
 // Adds a row
 const addR = () => {
@@ -25,7 +25,19 @@ const removeC = () => {
 
 // sets the global var color
 const selected = () => {
-
+    // get the selected
+    let val = document.getElementById('selectedID').value;
+    // set the color appropriately
+    switch (val) {
+        case "RED":
+            color = "#FF0000";
+        case "GREEN":
+            color = "#00FF00";
+        case "BLUE":
+            color = "#0000FF";
+        case "YELLOW":
+            color = "#FFFF00";
+    }
 }
 
 // fills all of the current squares with selected color
@@ -40,5 +52,5 @@ const fillU = () => {
 
 // clears the color from all of the squares
 const clearAll = () => {
-
+    
 }
