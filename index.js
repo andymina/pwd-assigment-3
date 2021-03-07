@@ -60,5 +60,11 @@ const fillU = () => {
 
 // clears the color from all of the squares
 const clearAll = () => {
-    
+    // grab all of the 
+    let squares = document.getElementsByClassName("square");
+    // set all of the squares to white
+    for (let square of square) {
+        square.style.backgroundColor = "#FFFFFF";
+    }
+
 }
