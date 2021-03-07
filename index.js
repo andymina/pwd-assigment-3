@@ -40,6 +40,14 @@ const selected = () => {
     }
 }
 
+// changes a cells color to the selected color
+const changeColor = (event) => {
+    // get the element
+    let el = event.target;
+    // set the color
+    el.style.backgroundColor = color;
+}
+
 // fills all of the current squares with selected color
 const fill = () => {
 
