@@ -88,6 +88,12 @@ const changeColor = (event) => {
 
 // fills all of the current squares with selected color
 const fill = () => {
+  // grab all current squares
+  let squares = document.getElementsByClassName("square");
+  // fill squares to global color variable
+  for (let square of squares){
+    square.style.backgroundColor = color; 
+  }
 
 }
 
