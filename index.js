@@ -10,29 +10,28 @@ const addR = () => {
   document.getElementById('grid').appendChild(row);
   rows = rows + 1;
 
-//if columns is currently 0 then we create the first table data (the square) and append to the row
-  if (cols == 0){
-    let square = document.createElement('td');
-    square.className = 'squares';
-    row.appendChild(square);
-    //once we add the first row, we now have one column
-    cols = 1;
-  }
-
   //for the number of columns we have, we render the same number of squares
   //create table data (the square), and append it to the row container
-  if (cols > 1){
+  if (cols >= 1){
     for(let i = 0; i < cols; i++){
       let square = document.createElement('td');
       square.className = 'squares';
       row.appendChild(square);
     }
   }
+
+//if columns is currently 0 then we create the first table data (the square) and append to the row
+  if (cols == 0){
+    let square = document.createElement('td');
+    square.className = 'squares';
+    row.appendChild(square);
+    //once we add the first row, we now have one column
+    cols = cols + 1;
+  }
 }
 
 // Adds a col
 const addC = () => {
-
 }
 
 // Removes a row
