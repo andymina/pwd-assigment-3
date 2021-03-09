@@ -37,8 +37,10 @@ const addC = () => {
 
 // Removes a row
 const removeR = () => {
-    document.getElementById('grid').deleteRow(rows-1);
-    rows = rows - 1;
+    if(rows >= 1){
+      document.getElementById('grid').deleteRow(rows-1);
+      rows = rows - 1;
+  }
 }
 
 // Removes a col
