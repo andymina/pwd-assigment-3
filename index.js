@@ -1,18 +1,32 @@
 // global var setup
 let rows = 0;
-let cols = 2;
+let cols = 0;
 let color = "#FFFFFF";
 
 // Adds a row
 const addR = () => {
+  //create a row container, and add it to the grid
   let row = document.createElement('tr');
   document.getElementById('grid').appendChild(row);
   rows = rows + 1;
-  console.log(rows);
-  for(let i = 0; i < cols; i++){
+
+//if columns is currently 0 then we create the first table data (the square) and append to the row
+  if (cols == 0){
     let square = document.createElement('td');
     square.className = 'squares';
     row.appendChild(square);
+    //once we add the first row, we now have one column
+    cols = 1;
+  }
+
+  //for the number of columns we have, we render the same number of squares
+  //create table data (the square), and append it to the row container
+  if (cols > 1){
+    for(let i = 0; i < cols; i++){
+      let square = document.createElement('td');
+      square.className = 'squares';
+      row.appendChild(square);
+    }
   }
 }
 
