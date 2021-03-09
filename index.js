@@ -32,7 +32,6 @@ const addR = () => {
 
 // Adds a col
 const addC = () => {
-  cols = cols + 1;
 }
 
 // Removes a row
@@ -40,7 +39,7 @@ const removeR = () => {
     //if there is more than one row, remove the most recent row added
     if(rows >= 1){
       document.getElementById('grid').deleteRow(rows-1);
-      //update row variable to match current number of rows 
+      //update row variable to match current number of rows
       rows = rows - 1;
   }
 }
