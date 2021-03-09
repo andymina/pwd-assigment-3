@@ -5,10 +5,11 @@ let color = "#FFFFFF";
 
 // Adds a row
 const addR = () => {
-  let square = document.createElement('tr');
-  square.className = 'square';
-  document.getElementById('grid').appendChild(square);
-  //document.body.appendChild(square);
+  let row = document.createElement('tr');
+  row.className = 'square';
+  document.getElementById('grid').appendChild(row);
+  rows = rows + 1;
+  console.log(rows);
 }
 
 // Adds a col
