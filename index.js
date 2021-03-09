@@ -1,15 +1,19 @@
 // global var setup
 let rows = 0;
-let cols = 0;
+let cols = 2;
 let color = "#FFFFFF";
 
 // Adds a row
 const addR = () => {
   let row = document.createElement('tr');
-  row.className = 'square';
   document.getElementById('grid').appendChild(row);
   rows = rows + 1;
   console.log(rows);
+  for(let i = 0; i < cols; i++){
+    let square = document.createElement('td');
+    square.className = 'squares';
+    row.appendChild(square);
+  }
 }
 
 // Adds a col
