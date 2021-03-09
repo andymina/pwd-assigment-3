@@ -32,11 +32,13 @@ const addR = () => {
 
 // Adds a col
 const addC = () => {
+  cols = cols + 1;
 }
 
 // Removes a row
 const removeR = () => {
-
+    document.getElementById('grid').deleteRow(rows-1);
+    rows = rows - 1;
 }
 
 // Removes a col
