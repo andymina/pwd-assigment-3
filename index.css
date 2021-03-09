@@ -14,3 +14,12 @@ td {
     width: 100px;
     background-color: red;
 }
+
+.square{
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  background-color: red;
+  border: 1px;
+  border-style: solid;
+}

@@ -5,7 +5,10 @@ let color = "#FFFFFF";
 
 // Adds a row
 const addR = () => {
-
+  let square = document.createElement('tr');
+  square.className = 'square';
+  document.getElementById('grid').appendChild(square);
+  //document.body.appendChild(square);
 }
 
 // Adds a col
@@ -60,7 +63,7 @@ const fillU = () => {
 
 // clears the color from all of the squares
 const clearAll = () => {
-    // grab all of the 
+    // grab all of the
     let squares = document.getElementsByClassName("square");
     // set all of the squares to white
     for (let square of square) {
