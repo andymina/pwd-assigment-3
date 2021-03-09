@@ -31,12 +31,18 @@ const selected = () => {
     switch (val) {
         case "RED":
             color = "#FF0000";
+            break;
         case "GREEN":
             color = "#00FF00";
+            break;
         case "BLUE":
             color = "#0000FF";
+            break;
         case "YELLOW":
             color = "#FFFF00";
+            break;
+        default:
+            color = "#FFFFFF"
     }
 }
 
@@ -63,7 +69,7 @@ const clearAll = () => {
     // grab all of the 
     let squares = document.getElementsByClassName("square");
     // set all of the squares to white
-    for (let square of square) {
+    for (let square of squares) {
         square.style.backgroundColor = "#FFFFFF";
     }
 
