@@ -94,13 +94,20 @@ const fill = () => {
   for (let square of squares){
     square.style.backgroundColor = color; 
   }
-
 }
 
 // fills all uncolored squares with selected color
 const fillU = () => {
-
+  // grab all current squares
+  let squares = document.getElementsByClassName("square");
+  // fill uncolored squares to global color variable
+  for (let square of squares){
+    if (square.style.backgroundColor === "" || square.style.backgroundColor === "rgb(255, 255, 255)" ){
+      square.style.backgroundColor = color;
+    }
+  }
 }
+
 
 // clears the color from all of the squares
 const clearAll = () => {
