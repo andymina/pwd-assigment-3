@@ -88,32 +88,18 @@ const changeColor = (event) => {
 
 // fills all of the current squares with selected color
 const fill = () => {
-  // grab all current squares
-  let squares = document.getElementsByClassName("square");
-  // fill uncolored squares to global color variable
-  console.log(squares.length);
-  for (let square of squares){
-
-      square.style.backgroundColor = color;
-    }
-
 }
 
 // fills all uncolored squares with selected color
 const fillU = () => {
-  let count = 0;
   // grab all current squares
   let squares = document.getElementsByClassName("square");
   // fill uncolored squares to global color variable
-  console.log(squares.length)
   for (let square of squares){
     if (square.style.backgroundColor === "" || square.style.backgroundColor === "rgb(255, 255, 255)" ){
-      count += 1;
       square.style.backgroundColor = color;
     }
-    // console.log(square.style.backgroundColor);
   }
-  console.log(count);
 }
 
 
@@ -124,7 +110,6 @@ const clearAll = () => {
     // set all of the squares to white
     for (let square of squares) {
         square.style.backgroundColor = "#FFFFFF";
-        console.log(square.style.backgroundColor);
     }
 
 }
