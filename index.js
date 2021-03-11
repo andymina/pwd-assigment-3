@@ -52,7 +52,16 @@ const removeR = () => {
 
 // Removes a col
 const removeC = () => {
-
+  //removes cols if there are any columns left
+  if (cols >= 1){
+    //loops through each rows
+    for (let row of rows_){
+      //deletes last cell
+      row.deleteCell(-1);
+    }
+    //update number of cols
+    cols = cols - 1;
+  }
 }
 
 // sets the global var color
@@ -92,7 +101,7 @@ const fill = () => {
   let squares = document.getElementsByClassName("square");
   // fill squares to global color variable
   for (let square of squares){
-    square.style.backgroundColor = color; 
+    square.style.backgroundColor = color;
   }
 }
 
