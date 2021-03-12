@@ -31,14 +31,14 @@ const addR = () => {
     //append square to row container
     row.appendChild(square);
     //once we add the first row, we now have one column
-    cols = cols + 1;
+    cols = 1;
+    rows = 1;
   }
 }
 
 // Adds a col
 const addC = () => {
-  //increments columns
-  cols = cols + 1;
+
   //if there are no rows, create one and add a square
   if (rows == 0){
     let tempRow = document.createElement('tr');
@@ -47,7 +47,8 @@ const addC = () => {
     square.className = 'square';
     square.onclick = changeColor;
     tempRow.appendChild(square);
-    rows = rows + 1;
+    rows = 1;
+    cols = 1;
   }
   else{
     //gets all existing rows
@@ -61,6 +62,8 @@ const addC = () => {
       row.appendChild(square);
     }
   }
+  //increments columns
+  cols = cols + 1;
 }
 
 // Removes a row
@@ -72,10 +75,14 @@ const removeR = () => {
       //update row variable to match current number of rows
       rows = rows - 1;
   }
+  if (rows == 0){
+    cols = 0;
+  }
 }
 
 // Removes a col
 const removeC = () => {
+  let rows_ = document.getElementsByTagName('tr');
   //removes cols if there are any columns left
   if (cols >= 1){
     //loops through each rows
@@ -85,6 +92,9 @@ const removeC = () => {
     }
     //update number of cols
     cols = cols - 1;
+  }
+  if (cols == 0){
+    rows = 0;
   }
 }
 
