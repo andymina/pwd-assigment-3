@@ -37,6 +37,30 @@ const addR = () => {
 
 // Adds a col
 const addC = () => {
+  //increments columns
+  cols = cols + 1;
+  //if there are no rows, create one and add a square
+  if (rows == 0){
+    let tempRow = document.createElement('tr');
+    document.getElementById('grid').appendChild(tempRow);
+    let square = document.createElement('td');
+    square.className = 'square';
+    square.onclick = changeColor;
+    tempRow.appendChild(square);
+    rows = rows + 1;
+  }
+  else{
+    //gets all existing rows
+    let rows_ = document.getElementsByTagName('tr');
+    //loops through all existing rows
+    for (let row of rows_){
+      //creates and add square to each row
+      let square = document.createElement('td');
+      square.className = 'square';
+      square.onclick = changeColor;
+      row.appendChild(square);
+    }
+  }
 }
 
 // Removes a row
