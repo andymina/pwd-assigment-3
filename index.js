@@ -76,6 +76,16 @@ const removeR = () => {
 
 // Removes a col
 const removeC = () => {
+  //removes cols if there are any columns left
+  if (cols >= 1){
+    //loops through each rows
+    for (let row of rows_){
+      //deletes last cell
+      row.deleteCell(-1);
+    }
+    //update number of cols
+    cols = cols - 1;
+  }
 }
 
 // sets the global var color
