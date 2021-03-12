@@ -48,7 +48,6 @@ const addC = () => {
     square.onclick = changeColor;
     tempRow.appendChild(square);
     rows = 1;
-    cols = 1;
   }
   else{
     //gets all existing rows
@@ -68,12 +67,12 @@ const addC = () => {
 
 // Removes a row
 const removeR = () => {
-    //remove rows if there are any rows left
-    if(rows >= 1){
-      //remove the most recent row added
-      document.getElementById('grid').deleteRow(rows-1);
-      //update row variable to match current number of rows
-      rows = rows - 1;
+  //remove rows if there are any rows left
+  if(rows >= 1){
+    //remove the most recent row added
+    document.getElementById('grid').deleteRow(rows-1);
+    //update row variable to match current number of rows
+    rows = rows - 1;
   }
   if (rows == 0){
     cols = 0;
@@ -95,6 +94,10 @@ const removeC = () => {
   }
   if (cols == 0){
     rows = 0;
+    let parent = document.getElementById('grid');
+
+    while (parent.firstChild)
+      parent.removeChild(parent.firstChild);
   }
 }
 
